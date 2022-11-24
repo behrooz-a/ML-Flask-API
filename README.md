@@ -1,9 +1,18 @@
-# ML-Flask-API
-Hi everyone,
+# Description
 
+ML-Flask-API is a Flask-based application that transforms values given in an
+HTML form element into a result.
 
-In this file I want to generate a local API with Flask.
-Since Flask read the HTML file from a templates folder, the web file has been generated on that folder.
-To run the API you need to run the py ectented file (ML_application.py)
-First run this file on CMD command line: python ML_application.py
-Then you will have access to a link  http://127.0.0.1:5000 then by copying and pasting it on your browser you can see the
+# How to run
+
+Perform the following commands on your machine to run the software:
+
+```shell
+pip3 install pipenv
+pipenv install
+pipenv shell
+./ML_application.py
+```
+
+This will start a web server listening on `http://localhost:5000` by
+default. Open this page in your browser to get started with the application.

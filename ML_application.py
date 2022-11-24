@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from flask import Flask, render_template, request
 import numpy as np
 import pickle
@@ -17,16 +19,20 @@ def web():
 def Prediction():
 
     height_strings = request.form.get("height").split(" ")
-    height_floats = map(float, height_strings)
-    print(
-        f"height_strings is a {type(height_strings)}; height_floats is a {type(height_floats)}."
-    )
+
+    # Option 1: Use map() to generate a list of floats
+    # height_floats = map(float, height_strings)
+
+    # Option 2: Use foreach to generate a list of floats
+    height_floats = []
+    for height_string in height_strings:
+        height_floats.append(float(height_string))
+
     x = np.array(list(height_floats))
-    predicted_weight = model.predict(x.reshape(1, -1))
-    print(f"predicted_weight is a {type(predicted_weight)}")
+    predicted_weights = model.predict(x.reshape(1, -1))
 
     return render_template(
-        "web.html", result="The predicted weights are {}kg".format(predicted_weight)
+        "web.html", result="You entered heights of {}. The predicted weights are {}kg.".format(height_floats, predicted_weights)
     )
 
 
