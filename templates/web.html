@@ -1,0 +1,22 @@
+<html>
+     <head>
+        &ensp;
+       <h1> Hi Behrooz!</h1>
+     </head>
+     
+        
+    
+    <body>
+      <p> <strong> Great! The Web App has been launched </strong></p>
+
+    
+      &emsp;
+    <form action="{{ url_for('Prediction')}}"method="post">
+      <label for ="fname"> Please enter your height: </label><br>
+      <input type="text" id="fname" name=" fname"  value="Height" ><br>
+      <button type="submit" class="btn btn-primary btn-block btn-large">Submit</button>
+    </form>
+    
+    </body>
+    {{result}}
+</html>
