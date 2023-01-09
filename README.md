@@ -3,6 +3,12 @@
 ML-Flask-API is a Flask-based application that transforms values given in an
 HTML form element into a result.
 
+# Data
+The data shared here is from https://www.kaggle.com/datasets/yersever/500-person-gender-height-weight-bodymassindex 
+
+# Train xgb model
+How to train the model with XGBoost model and save for API appilaction has been described here.
+
 # How to run
 
 Perform the following commands on your machine to run the software:
