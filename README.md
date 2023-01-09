@@ -5,6 +5,7 @@ HTML form element into a result.
 
 # Data
 The data shared here is from https://www.kaggle.com/datasets/yersever/500-person-gender-height-weight-bodymassindex 
+BMI_Index.csv
 
 # Train xgb model
 How to train the model with XGBoost model and save for API appilaction has been described here. "Train xgb model.ipynb"
