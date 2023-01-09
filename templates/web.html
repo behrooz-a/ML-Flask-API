@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+  <title>Weight Prediction</title>
+  <meta charset="UTF-8" />
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    }
+  </style>
+  <script>
+
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Hi Behrooz!</h1>
+  </header>
+  <main>
+    <p><strong>The Web App has been launched.</strong></p>
+    <form action="{{ url_for('Prediction')}}" method="post">
+      <label for="height">Please enter your gender, height, and weight in order with a space:</label><br />
+      <input type="text" id="height" name="height" placeholder="Height" /><br />
+      <button type="submit">Submit</button>
+    </form>
+    <p>{{result}}</p>
+  </main>
+</body>
+</html>
